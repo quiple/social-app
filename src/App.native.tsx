@@ -2,7 +2,8 @@ import 'react-native-url-polyfill/auto'
 import React, {useState, useEffect} from 'react'
 import 'lib/sentry' // must be relatively on top
 import {withSentry} from 'lib/sentry'
-import {Linking} from 'react-native'
+import {Linking, useColorScheme} from 'react-native'
+import {ThemeProvider as Restyle} from '@shopify/restyle'
 import {RootSiblingParent} from 'react-native-root-siblings'
 import * as SplashScreen from 'expo-splash-screen'
 import {GestureHandlerRootView} from 'react-native-gesture-handler'
@@ -16,10 +17,12 @@ import * as notifee from 'lib/notifee'
 import * as analytics from 'lib/analytics/analytics'
 import * as Toast from './view/com/util/Toast'
 import {handleLink} from './Navigation'
+import {theme, darkTheme} from 'lib/theme'
 
 SplashScreen.preventAutoHideAsync()
 
 const App = observer(() => {
+  const colorMode = useColorScheme()
   const [rootStore, setRootStore] = useState<RootStoreModel | undefined>(
     undefined,
   )
@@ -51,17 +54,28 @@ const App = observer(() => {
     return null
   }
   return (
-    <ThemeProvider theme={rootStore.shell.colorMode}>
-      <RootSiblingParent>
-        <analytics.Provider>
-          <RootStoreProvider value={rootStore}>
-            <GestureHandlerRootView style={s.h100pct}>
-              <Shell />
-            </GestureHandlerRootView>
-          </RootStoreProvider>
-        </analytics.Provider>
-      </RootSiblingParent>
-    </ThemeProvider>
+    <Restyle
+      theme={
+        rootStore.shell.colorMode === 'system'
+          ? colorMode === 'dark'
+            ? darkTheme
+            : theme
+          : rootStore.shell.colorMode === 'dark'
+          ? darkTheme
+          : theme
+      }>
+      <ThemeProvider theme={rootStore.shell.colorMode}>
+        <RootSiblingParent>
+          <analytics.Provider>
+            <RootStoreProvider value={rootStore}>
+              <GestureHandlerRootView style={s.h100pct}>
+                <Shell />
+              </GestureHandlerRootView>
+            </RootStoreProvider>
+          </analytics.Provider>
+        </RootSiblingParent>
+      </ThemeProvider>
+    </Restyle>
   )
 })
 
