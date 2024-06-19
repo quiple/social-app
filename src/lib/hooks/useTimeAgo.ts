@@ -50,30 +50,30 @@ export function dateDiff(
   if (diffSeconds < NOW) {
     return _(msg`now`)
   } else if (diffSeconds < MINUTE) {
-    return `${diffSeconds}${
-      long ? ` ${plural(diffSeconds, {one: 'second', other: 'seconds'})}` : 's'
-    }`
+    return long
+      ? plural(diffSeconds, {one: '# second', other: '# seconds'})
+      : _(msg`${diffSeconds}s`)
   } else if (diffSeconds < HOUR) {
     const diff = Math.floor(diffSeconds / MINUTE)
-    return `${diff}${
-      long ? ` ${plural(diff, {one: 'minute', other: 'minutes'})}` : 'm'
-    }`
+    return long
+      ? plural(diff, {one: '# minute', other: '# minutes'})
+      : _(msg`${diff}m`)
   } else if (diffSeconds < DAY) {
     const diff = Math.floor(diffSeconds / HOUR)
-    return `${diff}${
-      long ? ` ${plural(diff, {one: 'hour', other: 'hours'})}` : 'h'
-    }`
+    return long
+      ? plural(diff, {one: '# hour', other: '# hours'})
+      : _(msg`${diff}h`)
   } else if (diffSeconds < MONTH_30) {
     const diff = Math.floor(diffSeconds / DAY)
-    return `${diff}${
-      long ? ` ${plural(diff, {one: 'day', other: 'days'})}` : 'd'
-    }`
+    return long
+      ? plural(diff, {one: '# day', other: '# days'})
+      : _(msg`${diff}d`)
   } else {
     const diff = Math.floor(diffSeconds / MONTH_30)
     if (diff < 12) {
-      return `${diff}${
-        long ? ` ${plural(diff, {one: 'month', other: 'months'})}` : 'mo'
-      }`
+      return long
+        ? plural(diff, {one: '# month', other: '# months'})
+        : _(msg`${diff}mo`)
     } else {
       const str = new Date(earlier).toLocaleDateString()
 
