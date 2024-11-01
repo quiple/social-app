@@ -298,7 +298,7 @@ export function BottomBar({navigation}: BottomTabBarProps) {
                 style={{flexDirection: 'row', alignItems: 'center', gap: 4}}>
                 <Button
                   onPress={showCreateAccount}
-                  accessibilityHint={_(msg`Goes to sign up`)}
+                  accessibilityHint={_(msg`Sign up`)}
                   accessibilityLabel={_(msg`Sign up`)}>
                   <Text type="md" style={[{color: 'white'}, s.bold]}>
                     <Trans>Sign up</Trans>
@@ -308,7 +308,7 @@ export function BottomBar({navigation}: BottomTabBarProps) {
                 <Button
                   type="default"
                   onPress={showSignIn}
-                  accessibilityHint={_(msg`Goes to sign in`)}
+                  accessibilityHint={_(msg`Sign in`)}
                   accessibilityLabel={_(msg`Sign in`)}>
                   <Text type="md" style={[pal.text, s.bold]}>
                     <Trans>Sign in</Trans>

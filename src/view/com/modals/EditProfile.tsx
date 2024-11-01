@@ -185,7 +185,7 @@ export function Component({
               }
               accessible={true}
               accessibilityLabel={_(msg`Display name`)}
-              accessibilityHint={_(msg`Edits your display name`)}
+              accessibilityHint={_(msg`Edit your display name`)}
             />
           </View>
           <View style={s.pb10}>
@@ -203,7 +203,7 @@ export function Component({
               onChangeText={v => setDescription(enforceLen(v, MAX_DESCRIPTION))}
               accessible={true}
               accessibilityLabel={_(msg`Description`)}
-              accessibilityHint={_(msg`Edits your profile description`)}
+              accessibilityHint={_(msg`Edit your profile description`)}
             />
           </View>
           {updateMutation.isPending ? (

@@ -501,7 +501,7 @@ function SearchInput({
         autoCapitalize="none"
         autoFocus
         accessibilityLabel={_(msg`Search profiles`)}
-        accessibilityHint={_(msg`Searches profiles`)}
+        accessibilityHint={_(msg`Search profiles`)}
       />
     </View>
   )

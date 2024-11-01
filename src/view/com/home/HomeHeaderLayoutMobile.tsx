@@ -53,7 +53,7 @@ export function HomeHeaderLayoutMobile({
             accessibilityRole="button"
             accessibilityLabel={_(msg`Open navigation`)}
             accessibilityHint={_(
-              msg`Accesses profile and other navigation links`,
+              msg`Access profile and other navigation links`,
             )}
             hitSlop={HITSLOP_10}>
             <Menu size="lg" fill={t.atoms.text_contrast_medium.color} />

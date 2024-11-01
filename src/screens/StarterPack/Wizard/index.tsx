@@ -305,7 +305,7 @@ function WizardInner({
             hitSlop={HITSLOP_10}
             accessibilityRole="button"
             accessibilityLabel={_(msg`Back`)}
-            accessibilityHint={_(msg`Goes back to the previous step`)}
+            accessibilityHint={_(msg`Go back to the previous step`)}
             onPress={() => {
               if (state.currentStep === 'Details') {
                 navigation.pop()

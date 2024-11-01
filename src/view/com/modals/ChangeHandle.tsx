@@ -373,7 +373,7 @@ function CustomHandleForm({
           editable={!isProcessing}
           accessibilityLabelledBy="customDomain"
           accessibilityLabel={_(msg`Custom domain`)}
-          accessibilityHint={_(msg`Inputs your preferred hosting provider`)}
+          accessibilityHint={_(msg`Input your preferred hosting provider`)}
         />
       </View>
       <View style={styles.spacer} />
@@ -384,7 +384,7 @@ function CustomHandleForm({
           label={_(msg`DNS Panel`)}
           left
           onSelect={() => setDNSForm(true)}
-          accessibilityHint={_(msg`Uses the DNS panel`)}
+          accessibilityHint={_(msg`Use the DNS panel`)}
           style={s.flex1}
         />
         <SelectableBtn
@@ -392,7 +392,7 @@ function CustomHandleForm({
           label={_(msg`No DNS Panel`)}
           right
           onSelect={() => setDNSForm(false)}
-          accessibilityHint={_(msg`Uses a file on your server`)}
+          accessibilityHint={_(msg`Use a file on your server`)}
           style={s.flex1}
         />
       </View>
@@ -503,7 +503,7 @@ function CustomHandleForm({
       <TouchableOpacity
         onPress={onToggleCustom}
         accessibilityLabel={_(msg`Use default provider`)}
-        accessibilityHint={_(msg`Uses bsky.social as hosting provider`)}>
+        accessibilityHint={_(msg`Use bsky.social as hosting provider`)}>
         <Text type="md-medium" style={[pal.link, s.pl10, s.pt5]}>
           <Trans>Nevermind, create a handle for me</Trans>
         </Text>

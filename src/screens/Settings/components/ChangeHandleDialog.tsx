@@ -526,7 +526,7 @@ function OwnHandlePage({goToServiceHandle}: {goToServiceHandle: () => void}) {
       <Animated.View layout={native(LinearTransition)}>
         <Button
           label={_(msg`Use default provider`)}
-          accessibilityHint={_(msg`Goes back to previous page`)}
+          accessibilityHint={_(msg`Go back to previous page`)}
           onPress={goToServiceHandle}
           style={[a.p_0, a.justify_start]}>
           <ButtonText style={[{color: t.palette.primary_500}, a.text_left]}>

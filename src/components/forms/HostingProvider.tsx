@@ -43,7 +43,7 @@ export function HostingProvider({
       <Button
         testID="selectServiceButton"
         label={toNiceDomain(serviceUrl)}
-        accessibilityHint={_(msg`Presses to change hosting provider`)}
+        accessibilityHint={_(msg`Press to change hosting provider`)}
         variant="solid"
         color="secondary"
         style={[

@@ -216,7 +216,7 @@ export function AutoSizedImage({
         onPressIn={onPressIn}
         // alt here is what screen readers actually use
         accessibilityLabel={image.alt}
-        accessibilityHint={_(msg`Taps to view full image`)}
+        accessibilityHint={_(msg`Tap to view full image`)}
         style={[
           a.w_full,
           a.rounded_md,
@@ -236,7 +236,7 @@ export function AutoSizedImage({
           onPressIn={onPressIn}
           // alt here is what screen readers actually use
           accessibilityLabel={image.alt}
-          accessibilityHint={_(msg`Taps to view full image`)}
+          accessibilityHint={_(msg`Tap to view full image`)}
           style={[a.h_full]}>
           {contents}
         </Pressable>

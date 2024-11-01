@@ -619,7 +619,7 @@ function ComposerPost({
           accessible={true}
           accessibilityLabel={_(msg`Write post`)}
           accessibilityHint={_(
-            msg`Composes posts up to ${MAX_GRAPHEME_LENGTH} characters in length`,
+            msg`Compose posts up to ${MAX_GRAPHEME_LENGTH} characters in length`,
           )}
         />
       </View>
@@ -987,7 +987,7 @@ function ComposerFooter({
                 onPress={onEmojiButtonPress}
                 style={a.p_sm}
                 label={_(msg`Open emoji picker`)}
-                accessibilityHint={_(msg`Opens emoji picker`)}
+                accessibilityHint={_(msg`Open emoji picker`)}
                 variant="ghost"
                 shape="round"
                 color="primary">

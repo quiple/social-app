@@ -316,7 +316,7 @@ export function Handle() {
         accessible={screenReaderEnabled}
         onPress={() => close()}
         accessibilityLabel={_(msg`Dismiss`)}
-        accessibilityHint={_(msg`Double taps to close the dialog`)}>
+        accessibilityHint={_(msg`Double tap to close the dialog`)}>
         <View
           style={[
             a.rounded_sm,

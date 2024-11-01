@@ -141,7 +141,7 @@ export function NotificationsScreen({route: {params}}: Props) {
           ]}>
           <Button
             label={_(msg`Notifications`)}
-            accessibilityHint={_(msg`Refreshes notifications`)}
+            accessibilityHint={_(msg`Refresh notifications`)}
             onPress={emitSoftReset}>
             {({hovered, pressed}) => (
               <Text
