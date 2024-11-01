@@ -409,7 +409,7 @@ function LegacySettingsScreen({}: Props) {
             onPress={isSwitchingAccounts ? undefined : onPressAddAccount}
             accessibilityRole="button"
             accessibilityLabel={_(msg`Add account`)}
-            accessibilityHint={_(msg`Create a new Bluesky account`)}>
+            accessibilityHint={_(msg`Creates a new Bluesky account`)}>
             <View style={[styles.iconContainer, pal.btn]}>
               <FontAwesomeIcon
                 icon="plus"

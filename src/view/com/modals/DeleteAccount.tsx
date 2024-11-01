@@ -244,7 +244,7 @@ export function Component({}: {}) {
               accessibilityLabelledBy="confirmationCode"
               accessibilityLabel={_(msg`Confirmation code`)}
               accessibilityHint={_(
-                msg`Input confirmation code for account deletion`,
+                msg`Inputs confirmation code for account deletion`,
               )}
             />
             <Text
@@ -263,7 +263,7 @@ export function Component({}: {}) {
               onChangeText={setPassword}
               accessibilityLabelledBy="password"
               accessibilityLabel={_(msg`Password`)}
-              accessibilityHint={_(msg`Input password for account deletion`)}
+              accessibilityHint={_(msg`Inputs password for account deletion`)}
             />
             {error ? (
               <View style={styles.mt20}>

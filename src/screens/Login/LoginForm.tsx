@@ -197,7 +197,7 @@ export const LoginForm = ({
               blurOnSubmit={false} // prevents flickering due to onSubmitEditing going to next field
               editable={!isProcessing}
               accessibilityHint={_(
-                msg`Input the username or email address you used at signup`,
+                msg`Inputs the username or email address you used at signup`,
               )}
             />
           </TextField.Root>
@@ -222,7 +222,7 @@ export const LoginForm = ({
               onSubmitEditing={onPressNext}
               blurOnSubmit={false} // HACK: https://github.com/facebook/react-native/issues/21911#issuecomment-558343069 Keyboard blur behavior is now handled in onSubmitEditing
               editable={!isProcessing}
-              accessibilityHint={_(msg`Input your password`)}
+              accessibilityHint={_(msg`Inputs your password`)}
             />
             <Button
               testID="forgotPasswordButton"
@@ -267,7 +267,7 @@ export const LoginForm = ({
               onSubmitEditing={onPressNext}
               editable={!isProcessing}
               accessibilityHint={_(
-                msg`Input the code which has been emailed to you`,
+                msg`Inputs the code which has been emailed to you`,
               )}
             />
           </TextField.Root>

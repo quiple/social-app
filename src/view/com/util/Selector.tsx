@@ -105,7 +105,7 @@ export function Selector({
             key={item}
             onPress={() => onPressItem(i)}
             accessibilityLabel={_(msg`Select ${item}`)}
-            accessibilityHint={_(msg`Select option ${i} of ${numItems}`)}>
+            accessibilityHint={_(msg`Selects option ${i} of ${numItems}`)}>
             <View style={styles.item} ref={itemRefs[i]}>
               <Text
                 style={

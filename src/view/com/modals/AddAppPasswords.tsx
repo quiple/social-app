@@ -172,7 +172,7 @@ export function Component({}: {}) {
                 onSubmitEditing={createAppPassword}
                 accessible={true}
                 accessibilityLabel={_(msg`Name`)}
-                accessibilityHint={_(msg`Input name for app password`)}
+                accessibilityHint={_(msg`Inputs name for app password`)}
               />
             </View>
           </View>

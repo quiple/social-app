@@ -191,7 +191,7 @@ export function BottomBarWeb() {
             <View style={{flexDirection: 'row', alignItems: 'center', gap: 8}}>
               <Button
                 onPress={showCreateAccount}
-                accessibilityHint={_(msg`Sign up`)}
+                accessibilityHint={_(msg`Goes to sign up`)}
                 accessibilityLabel={_(msg`Sign up`)}>
                 <Text type="md" style={[{color: 'white'}, s.bold]}>
                   <Trans>Sign up</Trans>
@@ -201,7 +201,7 @@ export function BottomBarWeb() {
               <Button
                 type="default"
                 onPress={showSignIn}
-                accessibilityHint={_(msg`Sign in`)}
+                accessibilityHint={_(msg`Goes to sign in`)}
                 accessibilityLabel={_(msg`Sign in`)}>
                 <Text type="md" style={[pal.text, s.bold]}>
                   <Trans>Sign in</Trans>

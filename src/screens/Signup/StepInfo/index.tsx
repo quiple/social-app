@@ -220,7 +220,7 @@ export function StepInfo({
                   })
                 }}
                 label={_(msg`Date of birth`)}
-                accessibilityHint={_(msg`Select your date of birth`)}
+                accessibilityHint={_(msg`Selects your date of birth`)}
               />
             </View>
             <Policies

@@ -86,7 +86,9 @@ export function ViewHeader({
                 accessibilityRole="button"
                 accessibilityLabel={canGoBack ? _(msg`Back`) : _(msg`Menu`)}
                 accessibilityHint={
-                  canGoBack ? '' : _(msg`Access navigation links and settings`)
+                  canGoBack
+                    ? ''
+                    : _(msg`Accesses navigation links and settings`)
                 }>
                 {canGoBack ? (
                   <FontAwesomeIcon

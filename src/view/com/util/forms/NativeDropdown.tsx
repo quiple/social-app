@@ -259,7 +259,7 @@ function Backdrop() {
     <Pressable
       accessibilityRole="button"
       accessibilityLabel="Dialog backdrop"
-      accessibilityHint="Press the backdrop to close the dialog"
+      accessibilityHint="Presses the backdrop to close the dialog"
       style={{
         top: 0,
         left: 0,

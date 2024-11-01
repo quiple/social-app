@@ -104,7 +104,7 @@ function BirthdayInner({
           buttonStyle={[a.rounded_sm]}
           buttonLabelType="lg"
           accessibilityLabel={_(msg`Birthday`)}
-          accessibilityHint={_(msg`Enter your birth date`)}
+          accessibilityHint={_(msg`Enters your birth date`)}
           accessibilityLabelledBy="birthDate"
         />
       </View>

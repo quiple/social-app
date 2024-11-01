@@ -138,7 +138,7 @@ export function MessageInput({
         ]}>
         <AnimatedTextInput
           accessibilityLabel={_(msg`Message input field`)}
-          accessibilityHint={_(msg`Type your message here`)}
+          accessibilityHint={_(msg`Types your message here`)}
           placeholder={_(msg`Write a message`)}
           placeholderTextColor={t.palette.contrast_500}
           value={message}

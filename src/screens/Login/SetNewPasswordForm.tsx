@@ -118,7 +118,7 @@ export const SetNewPasswordForm = ({
             onBlur={onBlur}
             editable={!isProcessing}
             accessibilityHint={_(
-              msg`Input code sent to your email for password reset`,
+              msg`Inputs code sent to your email for password reset`,
             )}
           />
         </TextField.Root>
@@ -142,7 +142,7 @@ export const SetNewPasswordForm = ({
             onChangeText={setPassword}
             onSubmitEditing={onPressNext}
             editable={!isProcessing}
-            accessibilityHint={_(msg`Input new password`)}
+            accessibilityHint={_(msg`Inputs new password`)}
           />
         </TextField.Root>
       </View>
