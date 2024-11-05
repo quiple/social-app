@@ -18,7 +18,7 @@ import {msg, plural} from '@lingui/macro'
 import {useLingui} from '@lingui/react'
 
 import {IS_INTERNAL} from '#/lib/app-info'
-import {POST_CTRL_HITSLOP} from '#/lib/constants'
+import {DISCOVER_DEBUG_DIDS, POST_CTRL_HITSLOP} from '#/lib/constants'
 import {CountWheel} from '#/lib/custom-animations/CountWheel'
 import {AnimatedLikeIcon} from '#/lib/custom-animations/LikeIcon'
 import {useHaptics} from '#/lib/haptics'
@@ -85,6 +85,8 @@ let PostCtrls = ({
   const {sendInteraction} = useFeedFeedbackContext()
   const {captureAction} = useProgressGuideControls()
   const playHaptic = useHaptics()
+  const isDiscoverDebugUser =
+    IS_INTERNAL || DISCOVER_DEBUG_DIDS[currentAccount?.did ?? '']
   const isBlocked = Boolean(
     post.author.viewer?.blocking ||
       post.author.viewer?.blockedBy ||
@@ -254,6 +256,7 @@ let PostCtrls = ({
               requireAuth(() => onPressReply())
             }
           }}
+          accessibilityRole="button"
           accessibilityLabel={plural(post.replyCount || 0, {
             one: 'Reply (# reply)',
             other: 'Reply (# replies)',
@@ -291,6 +294,7 @@ let PostCtrls = ({
           testID="likeBtn"
           style={btnStyle}
           onPress={() => requireAuth(() => onPressToggleLike())}
+          accessibilityRole="button"
           accessibilityLabel={
             post.viewer?.like
               ? plural(post.likeCount || 0, {
@@ -330,6 +334,7 @@ let PostCtrls = ({
                   onShare()
                 }
               }}
+              accessibilityRole="button"
               accessibilityLabel={_(msg`Share`)}
               accessibilityHint=""
               hitSlop={POST_CTRL_HITSLOP}>
@@ -363,7 +368,7 @@ let PostCtrls = ({
           threadgateRecord={threadgateRecord}
         />
       </View>
-      {IS_INTERNAL && feedContext && (
+      {isDiscoverDebugUser && feedContext && (
         <Pressable
           accessible={false}
           style={{
