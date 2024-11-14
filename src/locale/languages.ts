@@ -19,6 +19,7 @@ export enum AppLanguage {
   it = 'it',
   ja = 'ja',
   ko = 'ko',
+  ko_KP = 'ko-KP',
   pt_BR = 'pt-BR',
   ru = 'ru',
   th = 'th',
