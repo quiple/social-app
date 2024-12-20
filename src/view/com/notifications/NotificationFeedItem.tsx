@@ -49,9 +49,9 @@ import {
   ChevronBottom_Stroke2_Corner0_Rounded as ChevronDownIcon,
   ChevronTop_Stroke2_Corner0_Rounded as ChevronUpIcon,
 } from '#/components/icons/Chevron'
-import {Heart2_Filled_Stroke2_Corner0_Rounded as HeartIconFilled} from '#/components/icons/Heart2'
+import {Heart2_Stroke as HeartIconFilled} from '#/components/icons/Heart2'
 import {PersonPlus_Filled_Stroke2_Corner0_Rounded as PersonPlusIcon} from '#/components/icons/Person'
-import {Repost_Stroke2_Corner2_Rounded as RepostIcon} from '#/components/icons/Repost'
+import {Repost_Stroke as RepostIcon} from '#/components/icons/Repost'
 import {StarterPack} from '#/components/icons/StarterPack'
 import {Link as NewLink} from '#/components/Link'
 import * as MediaPreview from '#/components/MediaPreview'
@@ -203,10 +203,10 @@ let NotificationFeedItem = ({
   let icon = (
     <HeartIconFilled
       size="xl"
-      style={[
-        s.likeColor,
-        // {position: 'relative', top: -4}
-      ]}
+      style={{strokeWidth: 2}}
+      fill={s.likeColor.color}
+      stroke={s.likeColor.color}
+      strokeLinejoin="round"
     />
   )
 
@@ -258,7 +258,16 @@ let NotificationFeedItem = ({
     ) : (
       <Trans>{firstAuthorLink} reposted your post</Trans>
     )
-    icon = <RepostIcon size="xl" style={{color: t.palette.positive_600}} />
+    icon = (
+      <RepostIcon
+        size="xl"
+        style={{strokeWidth: 2}}
+        stroke={t.palette.positive_600}
+        fill="none"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    )
   } else if (item.type === 'follow') {
     let isFollowBack = false
 

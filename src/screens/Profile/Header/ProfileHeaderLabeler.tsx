@@ -28,10 +28,7 @@ import * as Toast from '#/view/com/util/Toast'
 import {atoms as a, tokens, useTheme} from '#/alf'
 import {Button, ButtonText} from '#/components/Button'
 import {DialogOuterProps, useDialogControl} from '#/components/Dialog'
-import {
-  Heart2_Filled_Stroke2_Corner0_Rounded as HeartFilled,
-  Heart2_Stroke2_Corner0_Rounded as Heart,
-} from '#/components/icons/Heart2'
+import {Heart2_Stroke as Heart} from '#/components/icons/Heart2'
 import {Link} from '#/components/Link'
 import * as Prompt from '#/components/Prompt'
 import {RichText} from '#/components/RichText'
@@ -275,11 +272,14 @@ let ProfileHeaderLabeler = ({
                   label={_(msg`Like this feed`)}
                   disabled={!hasSession || isLikePending || isUnlikePending}
                   onPress={onToggleLiked}>
-                  {likeUri ? (
-                    <HeartFilled fill={t.palette.negative_400} />
-                  ) : (
-                    <Heart fill={t.atoms.text_contrast_medium.color} />
-                  )}
+                  <Heart
+                    style={{strokeWidth: 2}}
+                    stroke={t.atoms.text_contrast_medium.color}
+                    fill={
+                      likeUri ? undefined : t.atoms.text_contrast_medium.color
+                    }
+                    strokeLinejoin="round"
+                  />
                 </Button>
 
                 {typeof likeCount === 'number' && (

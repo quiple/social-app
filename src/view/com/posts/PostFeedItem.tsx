@@ -39,7 +39,7 @@ import {Text} from '#/view/com/util/text/Text'
 import {PreviewableUserAvatar} from '#/view/com/util/UserAvatar'
 import {atoms as a} from '#/alf'
 import {Pin_Stroke2_Corner0_Rounded as PinIcon} from '#/components/icons/Pin'
-import {Repost_Stroke2_Corner2_Rounded as RepostIcon} from '#/components/icons/Repost'
+import {Repost_Stroke as RepostIcon} from '#/components/icons/Repost'
 import {ContentHider} from '#/components/moderation/ContentHider'
 import {LabelsOnMyPost} from '#/components/moderation/LabelsOnMe'
 import {PostAlerts} from '#/components/moderation/PostAlerts'
@@ -307,9 +307,13 @@ let FeedItemInner = ({
               }
               onBeforePress={onOpenReposter}>
               <RepostIcon
-                style={{color: pal.colors.textLight, marginRight: 3}}
+                style={{marginRight: 3, strokeWidth: 2.5}}
                 width={13}
                 height={13}
+                fill="none"
+                stroke={pal.colors.textLight}
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
               <Text
                 type="sm-bold"

@@ -8,7 +8,7 @@ import {useSession} from '#/state/session'
 import {atoms as a, useTheme} from '#/alf'
 import {Button} from '#/components/Button'
 import {CloseQuote_Stroke2_Corner1_Rounded as Quote} from '#/components/icons/Quote'
-import {Repost_Stroke2_Corner2_Rounded as Repost} from '#/components/icons/Repost'
+import {Repost_Filled, Repost_Stroke as Repost} from '#/components/icons/Repost'
 import * as Menu from '#/components/Menu'
 import {Text} from '#/components/Typography'
 import {EventStopper} from '../EventStopper'
@@ -75,7 +75,7 @@ export const RepostButton = ({
             <Menu.ItemText>
               {isReposted ? _(msg`Undo repost`) : _(msg`Repost`)}
             </Menu.ItemText>
-            <Menu.ItemIcon icon={Repost} position="right" />
+            <Menu.ItemIcon icon={Repost_Filled} position="right" />
           </Menu.Item>
           <Menu.Item
             disabled={embeddingDisabled}
@@ -129,7 +129,14 @@ const RepostInner = ({
   const {i18n} = useLingui()
   return (
     <View style={[a.flex_row, a.align_center, a.gap_xs, {padding: 5}]}>
-      <Repost style={color} width={big ? 22 : 18} />
+      <Repost
+        style={{strokeWidth: isReposted ? 2.5 : 2}}
+        stroke={color.color}
+        fill="none"
+        width={big ? 22 : 18}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
       {typeof repostCount !== 'undefined' && repostCount > 0 ? (
         <Text
           testID="repostCount"

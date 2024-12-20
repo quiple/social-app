@@ -11,11 +11,8 @@ import {s} from '#/lib/styles'
 import {useTheme} from '#/lib/ThemeContext'
 import {atoms as a, useTheme as useTheme_NEW} from '#/alf'
 import {Bubble_Stroke2_Corner2_Rounded as Bubble} from '#/components/icons/Bubble'
-import {
-  Heart2_Filled_Stroke2_Corner0_Rounded as HeartIconFilled,
-  Heart2_Stroke2_Corner0_Rounded as HeartIconOutline,
-} from '#/components/icons/Heart2'
-import {Repost_Stroke2_Corner2_Rounded as Repost} from '#/components/icons/Repost'
+import {Heart2_Stroke as HeartIcon} from '#/components/icons/Heart2'
+import {Repost_Stroke as Repost} from '#/components/icons/Repost'
 
 export function LoadingPlaceholder({
   width,
@@ -84,26 +81,23 @@ export function PostLoadingPlaceholder({
           <View style={styles.postCtrl}>
             <View style={styles.postBtn}>
               <Repost
-                style={[
-                  {
-                    color: t.palette.contrast_500,
-                  },
-                  {pointerEvents: 'none'},
-                ]}
+                style={{pointerEvents: 'none', strokeWidth: 2}}
+                stroke={t.palette.contrast_500}
+                fill="none"
                 width={18}
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </View>
           </View>
           <View style={styles.postCtrl}>
             <View style={styles.postBtn}>
-              <HeartIconOutline
-                style={[
-                  {
-                    color: t.palette.contrast_500,
-                  },
-                  {pointerEvents: 'none'},
-                ]}
+              <HeartIcon
+                style={{pointerEvents: 'none', strokeWidth: 2}}
+                stroke={t.palette.contrast_500}
+                fill="none"
                 width={18}
+                strokeLinejoin="round"
               />
             </View>
           </View>
@@ -140,9 +134,12 @@ export function NotificationLoadingPlaceholder({
   return (
     <View style={[styles.notification, pal.view, style]}>
       <View style={[{width: 60}, a.align_end, a.pr_sm, a.pt_2xs]}>
-        <HeartIconFilled
+        <HeartIcon
           size="xl"
-          style={{color: pal.colors.backgroundLight}}
+          style={{strokeWidth: 2}}
+          stroke={pal.colors.backgroundLight}
+          fill={pal.colors.backgroundLight}
+          strokeLinejoin="round"
         />
       </View>
       <View style={{flex: 1}}>
