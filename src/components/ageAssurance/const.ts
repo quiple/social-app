@@ -16,6 +16,7 @@ export const KWS_SUPPORTED_LANGS = [
   {value: 'it', label: 'Italiano'},
   {value: 'ja', label: '日本語'},
   {value: 'ko', label: '한국어'},
+  {value: 'ko-KP', label: '조선말'},
   {value: 'pt', label: 'Português'},
   {value: 'pt-BR', label: 'Português (Brasil)'},
   {value: 'ru', label: 'Русский'},

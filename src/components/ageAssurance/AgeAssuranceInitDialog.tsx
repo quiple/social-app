@@ -367,6 +367,9 @@ function convertToKWSSupportedLanguage(
     // only en is supported
     case 'en-GB':
       return 'en'
+    // only ko is supported
+    case 'ko-KP':
+      return 'ko'
     // pt-PT is pt (pt-BR is supported independently)
     case 'pt-PT':
       return 'pt'

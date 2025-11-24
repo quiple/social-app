@@ -204,6 +204,8 @@ export function sanitizeAppLanguageSetting(appLanguage: string): AppLanguage {
         return AppLanguage.km
       case 'ko':
         return AppLanguage.ko
+      case 'ko-KP':
+        return AppLanguage.ko_KP
       case 'ne':
         return AppLanguage.ne
       case 'nl':

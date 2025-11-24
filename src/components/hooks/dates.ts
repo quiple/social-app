@@ -80,6 +80,7 @@ const locales: Record<AppLanguage, Locale | undefined> = {
   ja,
   km,
   ko,
+  ['ko-KP']: ko,
   ne: undefined,
   nl,
   pl,

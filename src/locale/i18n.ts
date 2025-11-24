@@ -37,6 +37,7 @@ import {messages as messagesIt} from '#/locale/locales/it/messages'
 import {messages as messagesJa} from '#/locale/locales/ja/messages'
 import {messages as messagesKm} from '#/locale/locales/km/messages'
 import {messages as messagesKo} from '#/locale/locales/ko/messages'
+import {messages as messagesKo_KP} from '#/locale/locales/ko-KP/messages'
 import {messages as messagesNe} from '#/locale/locales/ne/messages'
 import {messages as messagesNl} from '#/locale/locales/nl/messages'
 import {messages as messagesPl} from '#/locale/locales/pl/messages'
@@ -253,6 +254,14 @@ export async function dynamicActivate(locale: AppLanguage) {
     }
     case AppLanguage.ko: {
       i18n.loadAndActivate({locale, messages: messagesKo})
+      await Promise.all([
+        import('@formatjs/intl-pluralrules/locale-data/ko'),
+        import('@formatjs/intl-numberformat/locale-data/ko'),
+      ])
+      break
+    }
+    case AppLanguage.ko_KP: {
+      i18n.loadAndActivate({locale, messages: messagesKo_KP})
       await Promise.all([
         import('@formatjs/intl-pluralrules/locale-data/ko'),
         import('@formatjs/intl-numberformat/locale-data/ko'),

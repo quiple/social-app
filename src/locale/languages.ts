@@ -31,6 +31,7 @@ export enum AppLanguage {
   ja = 'ja',
   km = 'km',
   ko = 'ko',
+  ko_KP = 'ko-KP',
   ne = 'ne',
   nl = 'nl',
   pl = 'pl',
