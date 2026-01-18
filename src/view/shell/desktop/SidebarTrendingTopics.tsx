@@ -99,7 +99,10 @@ function Inner() {
                           a.text_sm,
                           a.leading_snug,
                           t.atoms.text_contrast_low,
-                          {minWidth: 16},
+                          {
+                            minWidth: 16,
+                            fontVariant: ['tabular-nums'],
+                          },
                         ]}>
                         {i + 1}.
                       </Text>
